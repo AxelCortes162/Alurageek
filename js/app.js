@@ -34,3 +34,11 @@ app.listen(port, () => {
   console.log(`Servidor en funcionamiento en http://localhost:${port}`);
 });
 
+// Permitir acceso solo desde ciertos dominios
+const corsOptions = {
+    origin: ['https://app.netlify.com', 'https://axelcortes162.github.io', 'https://alurageek-axelcortes.netlify.app/'],
+  };
+  
+  app.use(cors(corsOptions));
+  
+
