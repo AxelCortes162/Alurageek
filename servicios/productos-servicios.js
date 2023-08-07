@@ -87,21 +87,3 @@ export const productoServicios = {
     detalleProductoN, 
     perfiles
 };
-
-
-const express = require('express');
-const cors = require('cors');
-
-const app = express();
-
-// Agregar CORS como middleware global
-app.use(cors());
-
-// Resto de la configuración de tu servidor de API
-// ...
-
-// Iniciar el servidor
-const port = 3000;
-app.listen(port, () => {
-  console.log(`Servidor en funcionamiento en http://localhost:${port}`);
-});
