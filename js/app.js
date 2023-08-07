@@ -17,28 +17,25 @@ formulario.addEventListener("submit", (e) => {
  
 // app.js
 
-const express = require('express');
-const cors = require('cors');
 
-const app = express();
+  // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Agregar CORS como middleware global
-app.use(cors());
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBOQBXqSQK46mv8OHM2gxdgNhvJOMfXq8Q",
+  authDomain: "alurageek-1589b.firebaseapp.com",
+  projectId: "alurageek-1589b",
+  storageBucket: "alurageek-1589b.appspot.com",
+  messagingSenderId: "896721029931",
+  appId: "1:896721029931:web:0e59aa500e7d1659d0936e",
+  measurementId: "G-3N7JYL5GPQ"
+};
 
-// Resto de la configuración de tu servidor de API
-// ...
-
-// Iniciar el servidor
-const port = 3000;
-app.listen(port, () => {
-  console.log(`Servidor en funcionamiento en http://localhost:${port}`);
-});
-
-// Permitir acceso solo desde ciertos dominios
-const corsOptions = {
-    origin: ['https://app.netlify.com', 'https://axelcortes162.github.io', 'https://alurageek-axelcortes.netlify.app/'],
-  };
-  
-  app.use(cors(corsOptions));
-  
-
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
