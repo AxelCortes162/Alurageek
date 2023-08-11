@@ -9,10 +9,8 @@
   "main": "api/server.js",
   
   "scripts": {
-  
-    
-  "start": "json-server --watch db.json --port 3000"
-  
+    "server": "json-server --watch db.json -p 3000",
+    "dev": "serve ./"
   },
   
   "devDependencies": {
