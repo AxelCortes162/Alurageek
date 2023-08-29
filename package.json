@@ -9,8 +9,13 @@
   "main": "api/server.js",
   
   "scripts": {
-    "server": "json-server --watch db.json -p 3000",
-    "dev": "serve ./"
+  
+    
+  "server": "json-server --watch db.json -p 3000",
+  
+    
+  "dev": "serve ./"
+  
   },
   
   "devDependencies": {
@@ -27,6 +32,9 @@
   "license": "ISC",
   
   "dependencies": {
+  
+    
+  "axios": "^1.5.0",
   
     
   "cors": "^2.8.5",
