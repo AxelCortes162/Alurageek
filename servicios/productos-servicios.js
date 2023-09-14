@@ -1,23 +1,23 @@
 // GET
 const listaProductosP = () =>{
-    return fetch("http://localhost:3000/playeras")
+    return fetch("https://alurageek-lwdhj3pwx-axelcortes162.vercel.app/playeras")
     .then(respuesta => respuesta.json())
     .catch(error => console.log(error))
 }
 
 const listaProductosL = () =>{
-    return fetch("http://localhost:3000/laptops")
+    return fetch("https://alurageek-lwdhj3pwx-axelcortes162.vercel.app/laptops")
     .then(respuesta => respuesta.json())
     .catch(error => console.log(error))
 }
 const listaProductosN = () =>{
-    return fetch("http://localhost:3000/nfts")
+    return fetch("https://alurageek-lwdhj3pwx-axelcortes162.vercel.app/nfts")
     .then(respuesta => respuesta.json())
     .catch(error => console.log(error))
 }
 
 const perfiles = () =>{
-    return fetch("http://localhost:3000/perfil")
+    return fetch("https://alurageek-lwdhj3pwx-axelcortes162.vercel.app/perfil")
     .then((respuesta) => respuesta.json())
     .catch(error => console.log(error))
 }
@@ -25,7 +25,7 @@ const perfiles = () =>{
 //POST
 
 const crearProductoP = (imagenURL, nombre, price, descripcion) => {
-    return fetch("http://localhost:3000/playeras", {
+    return fetch("https://alurageek-lwdhj3pwx-axelcortes162.vercel.app/playeras", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -37,7 +37,7 @@ const crearProductoP = (imagenURL, nombre, price, descripcion) => {
 
 
 const crearProductoL = (imagenURL, nombre, price, descripcion) => {
-    return fetch("http://localhost:3000/laptops", {
+    return fetch("https://alurageek-lwdhj3pwx-axelcortes162.vercel.app/laptops", {
         method: "POST",
         headers: {
             "Content-type": "application/json"
@@ -48,7 +48,7 @@ const crearProductoL = (imagenURL, nombre, price, descripcion) => {
 
 
 const crearProductoN = (imagenURL, nombre, price, descripcion) => {
-    return fetch("  http://localhost:3000/nfts", {
+    return fetch("  https://alurageek-lwdhj3pwx-axelcortes162.vercel.app/nfts", {
         method: "POST",
         headers: {
             "Content-type": "application/json"
@@ -64,15 +64,15 @@ const crearProductoN = (imagenURL, nombre, price, descripcion) => {
 }
 
 const detalleProductoP = (id) =>{
-    return fetch (`http://localhost:3000/playeras/${id}`).then((respuesta) => respuesta.json());
+    return fetch (`https://alurageek-lwdhj3pwx-axelcortes162.vercel.app/playeras/${id}`).then((respuesta) => respuesta.json());
 }
 
 const detalleProductoL = (id) =>{
-    return fetch (`http://localhost:3000/laptops/${id}`).then((respuesta) => respuesta.json());
+    return fetch (`https://alurageek-lwdhj3pwx-axelcortes162.vercel.app/laptops/${id}`).then((respuesta) => respuesta.json());
 }
 
 const detalleProductoN = (id) =>{
-    return fetch (`http://localhost:3000/nfts/${id}`).then((respuesta) => respuesta.json());
+    return fetch (`https://alurageek-lwdhj3pwx-axelcortes162.vercel.app/nfts/${id}`).then((respuesta) => respuesta.json());
 }
 
 export const productoServicios = {
